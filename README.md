@@ -1,6 +1,7 @@
 # Description:
 Foundamental scripts for any car based game intended to use in Unity.
 
+# Details:
 ## CarAI:
 Works for 4 based lanes. Each lane is entited positions, position[0] is the farthest left with position[3] is the farthest right. It uses the x axis to define the left or right position, cannot work for z axis unless the object is rotated. The farthest left x axis is set to 62.5, changeable based on the actual left x axis, it uses said number to define the upcoming positions by adding a +5 each position. position[1], right of position[0], would be x = 67.5.
 Cars can turn either left or right randomally by one position, possible to be set to random posititions. They slowly change their lanes in which its possible to change the speed of either diving or wanting to dive by changing the new waitforseconds() function within the coroutines.
