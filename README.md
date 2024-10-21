@@ -1,5 +1,5 @@
 # Description:
-Foundamental scripts for any car based game intended to use in Unity.
+Foundamental scripts for any 3D car game for  Unity.
 
 # Features:
 - CarAI: Simple car AI used for highway roads.
@@ -12,10 +12,10 @@ Foundamental scripts for any car based game intended to use in Unity.
 Works for 4 based lanes. Each lane is entitled as positions, position[0] is the farthest left with position[3] is the farthest right. Positions are defined only in the x axis and cannot work in the z axis. Each position has to be defined but has default configs. Cars can turn either left or right randomally by one possion. They slowly change their lane with a set configurable speed.
 
 ### CameraFollow:
-Basic camera follow script inteded for car games. It has two modes: a fixed one and a dynamic one. The fixed one is exact, it takes the position of an empty GameObject that sets the cam's position while being childed to the moving vehicle. The 2nd mode is dynamic, it uses Lerp to make the camera slowly reach the car for a dynamic moving effect. It also has the feature of rotating the camera around the car using the mouse. 
+Camera follow script intended for 3D-car games. It has two modes: a fixed one and a dynamic one. The fixed one follows the car at the exact distance and speed. The 2nd mode is dynamic, it uses Lerp to make the camera slowly reach the car for a dynamic moving effect making it feel faster. It also has the feature of rotating the camera around the car using the mouse. 
 
 ### WorldSpawner:
 Used for linear infinite world generation. Spawn sets of terrain given as a prefab by getting the data of the current terrain. The system can only work IF the terrain is in 7*4 grid, in which it takes its position and adds a certain number in order to place the upcoming terrain prefab at the correct position. After the prefab is spawned, it calls the destroyIfFar() coroutine that checks if the player is closest to the newest prefab, in which it destroys the old one for optimisation. It functions only in the Z axis.
 
 ### SpawnCollider:
-Used for linear infinite world generation. Trigger collider typically placed at the terrain prefab, checks whether the player reached it in which once they collided, it calls the WorldSpawner's spawn() command, spawning the new terrain at the correct location. 
+Trigger collider typically placed at the terrain prefab, checks whether the player reached it in which once they collided, it calls the WorldSpawner's spawn() command, spawning the new terrain at the correct location. 
